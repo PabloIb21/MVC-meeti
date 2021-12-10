@@ -1,0 +1,47 @@
+{
+  "name": "meeti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "desarrollo": "concurrently \"npm run dev\" \"npm run watch\"",
+    "dev": "nodemon ./index",
+    "start": "node ./index.js",
+    "watch": "webpack --watch --mode development"
+  },
+  "author": "Pablo Ibarra",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-loader": "^8.2.3",
+    "nodemon": "^2.0.15",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bcrypt-nodejs": "^0.0.3",
+    "concurrently": "^6.4.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.13.0",
+    "leaflet-geosearch": "^2.7.0",
+    "moment": "^2.29.1",
+    "multer": "^1.4.3",
+    "nodemailer": "^6.7.2",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.7.1",
+    "sequelize": "^6.12.0-alpha.1",
+    "shortid": "^2.2.16",
+    "slug": "^5.1.0",
+    "sweetalert2": "^11.3.0",
+    "uuid": "^8.3.2"
+  }
+}

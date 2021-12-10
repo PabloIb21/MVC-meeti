@@ -1,0 +1,28 @@
+<div class="card">
+  <% if(meeti.grupo.imagen) { %>
+    <img src="/uploads/grupos/<%= meeti.grupo.imagen %>" alt="imagen grupo">
+  <% } else { %>
+    <img src="/img/meeti.jpg" alt="imagen perfil">
+  <% } %>
+  <div class="card-texto">
+      <% moment.locale('es'); %>
+      <% const fecha = `${meeti.fecha}  ${meeti.hora}`; %>
+      <p class="fecha"><%= moment(fecha).format('LLLL') %> Horas</p>
+      <a href="/meeti/<%= meeti.slug %>">
+          <h3><%= meeti.titulo %></h3>
+      </a>
+      <div class="info-autor">
+          <% if (meeti.usuario.imagen) { %>
+              <div class="imagen">
+                  <img src="/uploads/perfiles/<%= meeti.usuario.imagen %>" alt="perfil">
+              </div>
+          <% } else { %>
+              <div class="imagen"></div>
+          <% } %>
+          <div class="informacion">
+              <p>Organizado por:</p>
+              <p class="autor"><%= meeti.usuario.nombre %></p>
+          </div>
+      </div>
+  </div>
+</div>
